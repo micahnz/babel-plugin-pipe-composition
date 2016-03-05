@@ -14,6 +14,22 @@ array
 | filter(n => n % 3 == 0);
 ```
 
+## Disabling in current scope
+
+If you want to use the original pipe operator, you can disable this plugin in current scope (and it children scopes) using `"no pipe"` directive
+
+```javascript
+const fn = () => {
+  const arr = [1, 2, 3] | map(n => n + 1);
+
+  return () => {
+    "no pipe";
+
+    arr.map(n => n | 1);
+  };
+};
+```
+
 ## Installation
 
 ```sh
