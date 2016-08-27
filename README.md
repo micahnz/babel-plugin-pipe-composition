@@ -2,7 +2,7 @@
 
 Overload the bitwise operators (`<<`) and (`>>`) to provide to provide F# like pipe forward/backward behavior
 
-This is an alternative to [babel-plugin-pipe-operator](https://github.com/miraks/babel-plugin-pipe-operator) and [babel-plugin-pipe-operator-curry](https://github.com/miraks/babel-plugin-pipe-operator-curry) it uses the currying way instead of putting flow as the first callable arguments but allows piping forward and backward.
+This is an alternative to [babel-plugin-pipe-operator](https://github.com/miraks/babel-plugin-pipe-operator) and [babel-plugin-pipe-operator-curry](https://github.com/miraks/babel-plugin-pipe-operator-curry) and favors the currying approach.
 
 ## Examples
 
