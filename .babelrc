@@ -1,4 +1,15 @@
 {
-  "presets": ["es2015"],
-  "plugins": ["strict-equality", "implicit-return"]
+	"plugins": [
+		[
+			"transform-runtime", {
+				"polyfill": true,
+				"regenerator": true
+			}
+		],
+		"transform-object-rest-spread"
+	],
+	"presets": [
+		"es2015",
+		"stage-3"
+	]
 }

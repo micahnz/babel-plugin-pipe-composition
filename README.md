@@ -1,6 +1,8 @@
-# babel-plugin-pipe-operator
+# babel-plugin-pipe-composition
 
-Overload the pipe operator (`|`) to provide Elixir/F#/Shell-like behavior
+Overload the bitwise operators (`<<`) and (`>>`) to provide to provide F# like pipe forward/backward behavior
+
+This is an alternative to [babel-plugin-pipe-operator](https://github.com/miraks/babel-plugin-pipe-operator) and [babel-plugin-pipe-operator-curry](https://github.com/miraks/babel-plugin-pipe-operator-curry) it uses the currying way instead of putting flow as the first callable arguments but allows piping forward and backward.
 
 ## Examples
 
@@ -9,9 +11,9 @@ import { map, filter } from 'lodash';
 
 const array = [1, 2, 3, 4, 5];
 
-array
-| map(n => n * 2)
-| filter(n => n % 3 == 0);
+let result = array
+  >> map(n => n * 2)
+  >> filter(n => n % 3 == 0);
 ```
 
 ## Disabling in current scope
@@ -20,7 +22,7 @@ If you want to use the original pipe operator, you can disable this plugin in cu
 
 ```javascript
 const fn = () => {
-  const arr = [1, 2, 3] | map(n => n + 1);
+  const arr = [1, 2, 3] >> map(n => n + 1);
 
   return () => {
     "no pipe";
@@ -33,7 +35,7 @@ const fn = () => {
 ## Installation
 
 ```sh
-$ npm install --save-dev babel-plugin-pipe-operator
+$ npm install --save-dev babel-plugin-pipe-composition
 ```
 
 ## Usage
@@ -44,21 +46,21 @@ $ npm install --save-dev babel-plugin-pipe-operator
 
 ```json
 {
-  "plugins": ["pipe-operator"]
+  "plugins": ["pipe-composition"]
 }
 ```
 
 ### Via CLI
 
 ```sh
-$ babel --plugins pipe-operator script.js
+$ babel --plugins pipe-composition script.js
 ```
 
 ### Via Node API
 
 ```javascript
 require("babel-core").transform("code", {
-  plugins: ["pipe-operator"]
+  plugins: ["pipe-composition"]
 });
 ```
 

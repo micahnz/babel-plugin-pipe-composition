@@ -1,0 +1,22 @@
+{
+  "source": "./src",
+  "destination": "./docs",
+  "plugins": [
+    {
+      "name": "esdoc-es7-plugin"
+    }
+  ],
+  "manual": {
+    "overview": ["./manual/overview.md"],
+    "installation": ["./manual/installation.md"],
+    "tutorial": ["./manual/tutorial.md"],
+    "usage": ["./manual/usage.md"],
+    "configuration": ["./manual/configuration.md"],
+    "example": [
+      "./manual/examples/example1.md",
+      "./manual/examples/example2.md"
+    ],
+    "faq": ["./manual/faq.md"],
+    "changelog": ["./CHANGELOG.md"]
+  }
+}

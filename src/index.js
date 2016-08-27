@@ -1,27 +1,51 @@
-export default () => {
+export default (ref) => {
+  var t = ref.types;
+
   const hasDirective = (path, directive) => {
-    !!path.findParent(({ node }) => {
-      node.directives && node.directives.some(({ value }) => {
-        value.value == directive
-      })
-    })
-  }
+    let found = false;
+
+    path.findParent(({ node }) => {
+      if (node.directives) {
+        node.directives.some(({ value }) => {
+          found = (value.value == directive);
+        });
+      }
+    });
+
+    return found;
+  };
 
   return {
     visitor: {
       BinaryExpression(path) {
-        if (!path.isBinaryExpression({ operator: "|" })) return
-        if (hasDirective(path, "no pipe")) return
+        if (hasDirective(path, "no pipe")) return;
 
-        const rightPath = path.get("right")
+        if (path.isBinaryExpression({ operator: ">>" })) {
+          let args = t.isSequenceExpression(path.node.left)
+            ? path.node.left.expressions
+            : [path.node.left];
 
-        rightPath.assertCallExpression()
+          path.replaceWith(t.callExpression(path.node.right, args));
+        }
 
-        rightPath.node.arguments.unshift(path.node.left)
-        path.replaceWith(rightPath)
+        if (path.isBinaryExpression({ operator: "<<" })) {
+          if (t.isCallExpression(path.parent)) {
+            var expr = t.callExpression(
+              path.parent.callee.right,
+              path.parent.arguments
+            );
 
-        return
+            path.parentPath.replaceWith(t.callExpression(path.node.left, [expr]));
+          }
+          else {
+            let args = t.isSequenceExpression(path.node.right)
+              ? path.node.right.expressions
+              : [path.node.right];
+
+            path.replaceWith(t.callExpression(path.node.left, args));
+          }
+        }
       }
     }
-  }
-}
+  };
+};
