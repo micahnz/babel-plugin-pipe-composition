@@ -14,11 +14,15 @@ const array = [1, 2, 3, 4, 5];
 let result = array
   >> map(n => n * 2)
   >> filter(n => n % 3 == 0);
+
+let result = filter(n => n % 3 == 0)
+  << map(n => n * 2)
+  << array;
 ```
 
 ## Disabling in current scope
 
-If you want to use the original pipe operator, you can disable this plugin in current scope (and it children scopes) using `"no pipe"` directive
+If you want to use the original bitwise operators, you can disable this plugin in current scope (and child scopes) using `"no pipe"` directive
 
 ```javascript
 const fn = () => {
@@ -27,7 +31,17 @@ const fn = () => {
   return () => {
     "no pipe";
 
-    arr.map(n => n | 1);
+    arr.map(n => n >> 1);
+  };
+};
+
+const fn = () => {
+  const arr =  map(n => n + 1) << [1, 2, 3];
+
+  return () => {
+    "no pipe";
+
+    arr.map(n => 1 << n);
   };
 };
 ```
