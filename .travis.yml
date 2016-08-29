@@ -5,7 +5,5 @@ node_js:
   - "5"
   - "4"
   - "0.12"
-before_script:
-  - npm run snyk:auth  
 after_success:
   - npm run test:cov
