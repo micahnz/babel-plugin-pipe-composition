@@ -2,7 +2,6 @@
 [![npm version](https://badge.fury.io/js/babel-plugin-pipe-composition.svg)](https://badge.fury.io/js/babel-plugin-pipe-composition)
 [![npm license](https://img.shields.io/npm/l/babel-plugin-pipe-composition.svg?maxAge=2592000)]()
 [![build status](https://travis-ci.org/michaelmitchell/babel-plugin-pipe-composition.svg?branch=master)](https://travis-ci.org/michaelmitchell/babel-plugin-pipe-composition)
-[![code coverage](https://coveralls.io/repos/github/michaelmitchell/babel-plugin-pipe-composition/badge.svg?branch=master)](https://coveralls.io/github/michaelmitchell/babel-plugin-pipe-composition?branch=master)
 [![known vulnerabilities](https://snyk.io/test/npm/babel-plugin-pipe-composition/badge.svg)](https://snyk.io/test/npm/babel-plugin-pipe-composition)
 
 # babel-plugin-pipe-composition
