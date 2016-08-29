@@ -1,14 +1,14 @@
 {
   "name": "babel-plugin-pipe-composition",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Overload the bitwise operators (`<<`) and (`>>`) to provide F# like pipe forward/backward behavior",
-  "homepage": "https://github.com/michaelmitchell/patmos",
+  "homepage": "https://github.com/michaelmitchell/babel-plugin-pipe-composition",
   "repository": {
     "type": "git",
-    "url": "https://github.com/michaelmitchell/patmos.git"
+    "url": "https://github.com/michaelmitchell/babel-plugin-pipe-composition.git"
   },
   "bugs": {
-    "url": "https://github.com/michaelmitchell/patmos/issues"
+    "url": "https://github.com/michaelmitchell/babel-plugin-pipe-composition/issues"
   },
   "license": "MIT",
   "keywords": [
@@ -17,7 +17,9 @@
     "pipe",
     "pipe operator",
     "pipe forward",
-    "pipe backward"
+    "pipe backward",
+    "pipeline",
+    "pipe operator"
   ],
   "author": {
     "name": "Michael Mitchell",

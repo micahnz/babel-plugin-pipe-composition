@@ -2,17 +2,17 @@ export default (ref) => {
   var t = ref.types;
 
   const hasDirective = (path, directive) => {
-    let found = false;
+    let matched = false;
 
     path.findParent(({ node }) => {
       if (node.directives) {
         node.directives.some(({ value }) => {
-          found = (value.value == directive);
+          matched = (value.value == directive);
         });
       }
     });
 
-    return found;
+    return matched;
   };
 
   return {
@@ -30,7 +30,7 @@ export default (ref) => {
 
         if (path.isBinaryExpression({ operator: "<<" })) {
           if (t.isCallExpression(path.parent)) {
-            var expr = t.callExpression(
+            let expr = t.callExpression(
               path.parent.callee.right,
               path.parent.arguments
             );

@@ -1,8 +1,6 @@
 # Overview
-What it do?
 
 ## Feature
-- Feature list
 
 ## Demo
 

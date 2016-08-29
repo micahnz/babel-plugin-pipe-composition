@@ -18,8 +18,19 @@ This project adheres to [Semantic Versioning](http://semver.org/)
 
 ## [Unreleased]
 
+## [0.1.1] - 2016-08-29
+### Added
+- Keywords to npm package
+- Travis CI enabled
+- Coveralls enabled
+- README badges
+
+### Changed
+- Fixed package.json pointing to wrong git repo
+
 ## [0.1.0] - 2016-08-27
 ### Added
 - everything!
 
-[Unreleased]: https://github.com/michaelmitchell/patmos/compare/0.1.0...HEAD
+[Unreleased]: https://github.com/michaelmitchell/babel-plugin-pipe-composition/compare/0.1.1...HEAD
+[Unreleased]: https://github.com/michaelmitchell/babel-plugin-pipe-composition/compare/0.1.0...0.1.1
