@@ -17,10 +17,16 @@ This project adheres to [Semantic Versioning](http://semver.org/)
 -->
 
 ## [Unreleased]
+
+### Added
+- New examples to README
+
 ### Changed
 - Fixed link in README
+- Updated README
 
 ## [0.1.1] - 2016-08-29
+
 ### Added
 - Keywords to npm package
 - Travis CI enabled
@@ -31,8 +37,10 @@ This project adheres to [Semantic Versioning](http://semver.org/)
 - Fixed package.json pointing to wrong git repo
 
 ## [0.1.0] - 2016-08-27
+
 ### Added
 - everything!
 
 [Unreleased]: https://github.com/michaelmitchell/babel-plugin-pipe-composition/compare/0.1.1...HEAD
-[Unreleased]: https://github.com/michaelmitchell/babel-plugin-pipe-composition/compare/0.1.0...0.1.1
+[0.1.1]: https://github.com/michaelmitchell/babel-plugin-pipe-composition/compare/0.1.0...0.1.1
+[0.1.0]: https://github.com/michaelmitchell/babel-plugin-pipe-composition/compare/80a14e6993226c1fc8ff1a8dce3f51d1a399d751...0.1.0
