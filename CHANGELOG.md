@@ -20,10 +20,17 @@ This project adheres to [Semantic Versioning](http://semver.org/)
 
 ### Added
 - New examples to README
+- npm package babel-istanbul
 
 ### Changed
 - Fixed link in README
 - Updated README
+
+### Fixed
+- code coverage
+
+### Removed
+- npm package isparta
 
 ## [0.1.1] - 2016-08-29
 
