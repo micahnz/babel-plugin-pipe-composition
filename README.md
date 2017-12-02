@@ -115,3 +115,6 @@ require("babel-core").transform("code", {
 # License
 
 MIT
+
+---
+[![Donate](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/michaelmitchell/donate)
